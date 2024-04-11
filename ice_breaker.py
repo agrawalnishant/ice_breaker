@@ -6,13 +6,12 @@ from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 
 from agents.linkedin_lookup_agent import lookup as linkedin_lookup_agent
-from thirdparty.linkedin import scrape_linkedin_profile
-
+from thirdparty.linkedin import scrape_linkedin_profile, scrape_linkedin_profile_mock
 
 if __name__ == "__main__":
     print("Hello LangChain!")
 
-    linkedin_profile_url = linkedin_lookup_agent(name="Eden Marco Udemy")
+    linkedin_profile_url = linkedin_lookup_agent(name="nishant agrawal at Apptio")
 
     summary_template = """
          given the Linkedin information {information} about a person from I want you to create:
