@@ -31,7 +31,12 @@ def lookup(name: str) -> str:
             name="Crawl Google 4 linkedin profile page",
             func=get_profile_url_tavily,
             description="useful for when you need get the Linkedin Profile Page URL",
-        )
+        ),
+        Tool(
+            name="Crawl Google 4 linkedin profile page",
+            func=get_profile_url_tavily,
+            description="useful for when you need get the Linkedin Username",
+        ),
     ]
 
     react_prompt = hub.pull("hwchase17/react")

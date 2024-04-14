@@ -27,6 +27,8 @@ if __name__ == "__main__":
 
     chain = LLMChain(llm=llm, prompt=summary_prompt_template)
 
-    linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_profile_url)
+    linkedin_data = scrape_linkedin_profile_mock(
+        linkedin_profile_url=linkedin_profile_url
+    )
 
     print(chain.invoke(input={"information": linkedin_data}))
